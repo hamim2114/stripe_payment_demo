@@ -10,6 +10,7 @@ const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors({origin: ['http://localhost:4000','https://stripe-payment-demo-client-xfr9.vercel.app'], credentials: true}));
+// app.use(cors());
 
 const port = 5000;
 
@@ -48,7 +49,7 @@ app.post('/payment', async (req, res) => {
     });
 
     const mailOptions = {
-      from: 'hamim2115@gmail.com',
+      from: 'hamim2114@gmail.com',
       to: token.email,
       subject: 'Payment Receipt from stripe',
       html: `

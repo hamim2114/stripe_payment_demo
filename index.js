@@ -48,7 +48,7 @@ app.post('/payment', async (req, res) => {
     });
 
     const mailOptions = {
-      from: 'reachoutpro.ai@gmail.com',
+      from: 'hamim2115@gmail.com',
       to: token.email,
       subject: 'Payment Receipt from stripe',
       html: `
